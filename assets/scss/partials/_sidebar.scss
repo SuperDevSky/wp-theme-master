@@ -1,0 +1,28 @@
+.sidebar {
+	.widget {
+		margin: 0 0 30px;
+
+		ul,
+		ol {
+			@extend %reset-list;
+		}
+
+		h2 {
+			font-size: 20px;
+			margin: 0 0;
+		}
+
+		.wp-block-search {
+			.wp-block-search__input {
+				input {
+					@extend .input;
+					border: 1px solid var(--gray);
+				}
+
+				button {
+					@extend .btn;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,84 @@
+.pagination-wrapper {
+  padding: 30px 0;
+  
+  @include breakpoint(md) {
+    padding: 50px 0;
+  }
+
+  a {
+  	text-decoration: none;
+  }
+
+  &::after {
+    display: none !important;
+  }
+
+  .nav-links {
+    text-align: center;
+
+    > a,
+    > span {
+      color: #333;
+      font-weight: 500;
+      font-size: 15px;
+      margin: 0 4px;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #333;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 40px;
+      padding: 0;
+      text-align: center;
+
+      &.current {
+        color: var(--white);
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+    }
+
+    .nav-prev-text,
+    .nav-next-text {
+      display: none;
+    }
+
+    a {
+      &:hover {
+        color: var(--white);
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+    }
+
+    .prev {
+      &::before {
+        content: "\f104";
+        display: inline-block;
+        font-family: $awesome-font;
+        line-height: 38px;
+        font-size: 15px;
+        font-weight: 900;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    .next {
+      &::before {
+        content: "\f105";
+        display: inline-block;
+        font-family: $awesome-font;
+        line-height: 38px;
+        font-size: 15px;
+        font-weight: 900;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}

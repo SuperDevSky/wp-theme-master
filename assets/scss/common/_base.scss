@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #E6E7E8;
+  --blue: #014a81;
+
+  --primary: #004a80;
+  --second: #8ac042;
+  --text-body: #333;
+}
+
+$primary-font: 'Arial', serif;
+$second-font: 'Arial', serif;
+$awesome-font: 'Font Awesome 5 Free', serif;
+
+/* Base Setting
+---------------------------------------- */
+body {
+	padding: 0;
+	font-family: $primary-font;
+	margin: 0;
+	font-size: 16px;
+	overflow-wrap: break-word;
+	font-weight: 400;
+	color: var(--text-body);
+	overflow-x: hidden;
+	line-height: 1.5;
+	position: relative;
+	width: 100%;
+	background: var(--white);
+  max-width: 100%;
+}
+
+a {
+  transition: all 0.3s;
+  color: var(--primary);
+  outline: none !important;
+
+  &:hover {
+    opacity: 1;
+    color: var(--second);
+  }
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $primary-font;
+  font-weight: 700; 
+  color: var(--primary);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.5;
+
+  @include breakpoint(md) {
+    font-size: 36px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 1.45;
+
+  @include breakpoint(md) {
+    font-size: 30px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+figure {
+  margin: 10px 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin: 0 0 15px 30px;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 0 15px 15px;
+}
+
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+fieldset {
+  padding: 3.5px 7.5px 6.25px;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", courier, monospace;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  max-width: 100%;
+  overflow: auto;
+  padding: 15px;
+}
+
+code,
+kbd,
+tt,
+var {
+  font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}

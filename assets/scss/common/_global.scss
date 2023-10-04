@@ -1,0 +1,271 @@
+%container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+%reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%section-heading {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  color: var(--second);
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.4;
+
+  span {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      bottom: 7px;
+      left: 0;
+      background: var(--second);
+    }
+  }
+}
+
+label {
+  margin: 0 0 5px;
+  display: inline-block;
+}
+
+.input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="phone"],
+input[type="search"],
+input[type="date"],
+input[type="url"],
+textarea,
+select {
+  padding: 10px 20px;
+  outline: none !important;
+  border-radius: 0;
+  background: none;
+  border: 1px solid var(--gray);
+  width: 100%;
+  line-height: 1.4;
+  min-height: 44px;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.btn,
+button,
+input[type="button"],
+input[type="submit"] {
+  transition: all 0.3s;
+  color: var(--white);
+  padding: 13px 30px;
+  text-align: center;
+  font-weight: 700;
+  display: inline-block;
+  outline: none !important;
+  border-radius: var(--radius);
+  background: var(--primary);
+  border: 0;
+  font-weight: normal;
+  border-radius: 0;
+  font-size: inherit;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.9;
+    color: var(--white);
+  }
+
+  svg {
+    margin-right: 15px;
+    max-height: 20px;
+  }
+
+  &.btn-white {
+    color: var(--primary);
+    background: var(--white);
+  }
+}
+
+.btn-arrow {
+  font-size: 18px;
+  background: var(--primary);
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 11px;
+  line-height: 1;
+  border-radius: 0;
+
+  &::after {
+    content: '';
+    background: url('../images/right-arrow.svg') no-repeat 50% 50% / 100% transparent;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+
+.btn-outline {
+  border: 2px solid #b4cad5;
+  color: #b4cad5;
+  border-radius: 50px;
+  width: fit-content;
+  padding: 13px 40px;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 1.4;
+
+  &:hover {
+    background: var(--second);
+    color: var(--white);
+  }
+}
+
+.container {
+  @extend %container;
+}
+
+.container-fluid {
+  @extend %container;
+  max-width: 100%;
+
+  @include breakpoint(md) {
+    padding: 0 15px;
+  }
+}
+
+.alignleft {
+  /*rtl:ignore*/
+  float: left;
+  /*rtl:ignore*/
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.alignright {
+  /*rtl:ignore*/
+  float: right;
+  /*rtl:ignore*/
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+.featured-image {
+  figure {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.section {
+  &__heading {
+    @extend %section-heading;
+  }
+}
+
+#wpadminbar {
+  position: fixed;
+  top: 0;
+}
+
+.responsive-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+/* Galleries
+--------------------------------------------- */
+.gallery {
+  margin-bottom: 1.5em;
+  display: grid;
+  grid-gap: 1.5em;
+}
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.gallery-columns-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-columns-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-columns-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-columns-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.gallery-columns-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.gallery-columns-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.gallery-columns-9 {
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.gallery-caption {
+  display: block;
+}
+
+#wpadminbar {
+  position: fixed;
+  top: 0;
+}

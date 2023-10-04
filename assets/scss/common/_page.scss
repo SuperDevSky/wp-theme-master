@@ -1,0 +1,60 @@
+.page-title {
+	padding: 50px 0;
+	background: #dcdcdc;
+}
+
+.site-main {
+	margin: 50px 0 70px;
+	min-height: calc(100vh - 250px);
+}
+
+.main-sidebar {
+	margin: 50px 0 70px;
+
+	&__inner {
+		@include breakpoint(md) {
+			display: flex;
+			margin: 0 -15px;
+		}
+	}
+
+	.site-main {
+		margin: 0 0 50px;
+
+		@include breakpoint(md) {
+			margin: 0;
+			width: 75%;
+			padding: 0 15px;
+		}
+	}
+
+	.sidebar {
+		@include breakpoint(md) {
+			width: 25%;
+			padding: 0 15px;
+		}
+	}
+}
+
+.error-404 {
+	text-align: center;
+
+	h1 {
+		margin: 0 0 30px;
+		line-height: 1;
+
+		@include breakpoint(md) {
+			font-size: 80px;
+		}
+	}
+
+	h2 {
+		margin: 0 0 10px;
+	}
+
+	.btn {
+		border-radius: 50px;
+		text-transform: uppercase;
+		margin-top: 30px;
+	}
+}
